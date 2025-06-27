@@ -23,8 +23,11 @@ function App() {
       </div>
       <div className="birthday-message">
         <h2>For Swari 💖</h2>
-        <p>Wishing you smiles, music, and a little bit of magic today ✨🎶
-            उड़ता फिरे दिल, उतरना जाने ना🌺</p>
+      <p>
+          "Happy Birthday! Hope this year surprises you in the best ways… good people,
+          good moments, and maybe… a little more of me in it 😌."
+        </p>
+        <p>Have the best day! उड़ता फिरे दिल, उतरना जाने ना 🌺</p>
       </div>
     </div>
   );
