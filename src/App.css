@@ -1,98 +1,88 @@
 body {
   margin: 0;
-  padding: 90;
-  background-color: #fff0f5;
-  font-family: 'Arial', sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff0f5; /* Light pink background */
 }
 
 .birthday-container {
   text-align: center;
-  padding: 40px 20px;
-  color: #ff69b4;
-  position: relative;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 h1 {
-  font-size: 3rem;
+  color: #ff69b4; /* Hot Pink */
+  font-size: 2.2rem;
   margin-bottom: 10px;
 }
 
-p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+.birthday-message {
+  color: #ff69b4;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #ffe6f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
+}
+
+.birthday-message p {
+  margin: 10px 0;
+  line-height: 1.5;
 }
 
 .image-button-wrapper {
   position: relative;
-  display: inline-block;
-  padding: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.surround-pic {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
 }
 
 button {
   background-color: #ff69b4;
   color: white;
   border: none;
-  padding: 14px 28px;
-  border-radius: 30px;
+  padding: 12px 24px;
+  border-radius: 25px;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.4);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  position: relative;
-  z-index: 2;
+  margin-top: 20px;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  background-color: #ff4d94;
+  background-color: #ff1493;
   transform: scale(1.05);
 }
 
-.surround-pic {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 0%;
-  position: absolute;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
+/* ✅ Mobile optimization */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
 
-.top-left {
-  top: -80px;
-  left: -500px;
-}
+  .birthday-message {
+    font-size: 1rem;
+    padding: 8px;
+  }
 
-.top-right {
-  top: -80px;
-  right: -500px;
-}
+  .surround-pic {
+    width: 60px;
+    height: 60px;
+  }
 
-.bottom-left {
-  bottom: -350px;
-  left: -500px;
-}
-
-.bottom-right {
-  bottom: -350px;
-  right: -500px;
-}
-.birthday-message {
-  text-align: center;
-  color: #ff69b4; /* Hot pink */
-  margin-bottom: 20px;
-  animation: fadeIn 2s ease;
-}
-
-.birthday-message h2 {
-  font-size: 2rem;
-  margin: 0;
-}
-
-.birthday-message p {
-  font-size: 1.2rem;
-  margin-top: 5px;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  button {
+    width: 80%;
+    font-size: 1rem;
+  }
 }
